@@ -1,25 +1,47 @@
-import logo from '../src/img/logo-circular-texto.png';
+//import logo from '../src/img/logo-circular-texto.png';
+import foto from "../src/img/header-simpsons.gif"
+import Personajes from "./personajes";
+import Homersapiens from "./homersapien";
+import Footer from "./footer";
+
 
 function App() {
   return (
     <div className="container-fluid">
-      <header className="container-fluid d-flex flex-column align-items-center mt-5">
-      <h1 className="text-center">Bienvenido al template simple de React</h1>
-         <div className="w-25">
-        <img src={logo} className="w-100" alt="logo" />
-         </div>
-        <p>
-          Edita <code>src/App.js</code> y salva el cambio para recargar.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Aprendé React
-        </a>
-      </header>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <div className="container-fluid">
+      <img src ={foto} alt = "los simpsons fan blog"></img>
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+            <a className="nav-link active" aria-current="page" href="#">inicio</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" href="#">blog</a>
+          </li>
+          <li className="nav-item">
+            <a className="nav-link active" href="#">contacto</a>
+          </li>
+        </ul>
+        <form className="d-flex">
+          <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button className="btn btn-outline-success" type="submit">busqueda</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+    <div>
+      <Homersapiens />
+    </div>
+    <div>
+        <Personajes/>
+    </div>
+        <div>
+          <Footer/>
+        </div>
     </div>
   );
 }
